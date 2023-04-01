@@ -8,6 +8,7 @@ import ReviewCard from "./ReviewCard.js";
 import Loader from "../layout/Loader/Loader";
 import { useAlert } from "react-alert";
 import { useParams } from "react-router-dom";
+import MetaData from "../layout/MetaData";
 
 const ProductDetails = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,8 @@ const ProductDetails = () => {
         <Loader />
       ) : (
         <Fragment>
+          <MetaData title={`${product.name} -- ECOMMERCE`} />
+
           <div className="ProductDetails">
             <div>
               <Carousel>
