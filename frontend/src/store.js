@@ -10,9 +10,12 @@ import {
   productReducer,
 } from "./reducers/productReducer.js";
 
+import { userReducer } from "./reducers/userReducer";
+
 const reducer = combineReducers({
   products: productReducer,
   productDetails: productDetailsReducer,
+  user: userReducer,
 });
 
 let initialState = {};
